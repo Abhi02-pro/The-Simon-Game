@@ -10,7 +10,7 @@ var gameStart = false;
 var level = 0;
 
 
-$(document).keypress(function(){
+$(".start").click(function(){
     if(!gameStart){        
         nextSequence();
     }
@@ -43,6 +43,7 @@ function animatePress(name){
 }
 
 function nextSequence(){
+    $(".start").fadeOut(500);
     userClickedPattern = [];
     level++;
     $("#level-title").text("Level " + level);
@@ -66,7 +67,7 @@ function checkAnswer(currentLevel){
     else{
         playSound("wrong");
         $("body").addClass("game-over");
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+        $("#level-title").text("Game Over !!!");
         setTimeout(function(){
             $("body").removeClass("game-over");
         }, 500);
@@ -79,6 +80,7 @@ function startOver(){
     gamePattern = [];
     level = 0;
     gameStart = false;
+    $(".start").fadeIn(1000);
 }
 
 
