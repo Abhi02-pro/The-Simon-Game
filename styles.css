@@ -33,7 +33,8 @@ body {
   color:floralwhite ;
   margin-top: 3%;
   padding: 10px;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .game-over {
